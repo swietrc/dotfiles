@@ -1,0 +1,35 @@
+[user]
+	name = swietrich
+	email = simon@wietri.ch
+
+[core]
+	editor = nvim
+	autocrlf = input
+
+[color]
+	ui = auto
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	cm = commit -m
+	ca = commit --amend
+	df = diff
+	lg = log --graph --oneline --decorate --all
+	l = log --oneline --decorate --graph -10
+
+[pull]
+	rebase = false
+
+[push]
+	default = current
+
+[merge]
+	tool = vimdiff
+
+[mergetool "vimdiff"]
+	cmd = nvim -d "$LOCAL" "$REMOTE" "$MERGED" -c -c "wincmd w" -c "wincmd J"
+
+[init]
+	defaultBranch = main
